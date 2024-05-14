@@ -1,0 +1,33 @@
+[
+  {
+    "type": "folder",
+    "name": "App.js",
+    "item": [
+      {
+        "type": "folder",
+        "name": "App.py",
+        "item": [{ "type": "folder", "name": "App.py", "item": "" }]
+      },
+      { "type": "folder", "name": "data.js" },
+      { "type": "folder", "name": "src.js" },
+      { "type": "file", "name": "index.jsx" }
+    ]
+  },
+  { "type": "folder", "name": "App.py", "item": "" },
+  {
+    "type": "folder",
+    "name": "data.js",
+    "item": [
+      { "type": "folder", "name": "Appxx.py", "item": "" },
+      { "type": "folder", "name": "Appxx.py", "item": "" },
+      { "type": "folder", "name": "Appxx.py", "item": "" },
+      { "type": "folder", "name": "Appxx.py", "item": "" },
+      { "type": "folder", "name": "Appxx.py", "item": "" }
+    ]
+  },
+  { "type": "folder", "name": "src.js", "item": "" },
+  { "type": "file", "name": "index.jsx", "item": "" },
+  { "type": "file", "name": "root.tsx", "item": "" },
+  { "type": "file", "name": "package.json", "item": "" },
+  { "type": "file", "name": "RAMDE.MD", "item": "" }
+]

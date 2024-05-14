@@ -6,28 +6,47 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  /* the color is me  */
+  --color-root-g :#00b192;
+  --color-root-r :#00405a;
+  --color-root-r-100 :#198b71;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
+/* right: ; */
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .nav-link {
+    @apply text-zinc-500 hover:text-zinc-800 transition-colors;
   }
 }
+*.nav-link{
+  
+  font-family :
+__geistSansFont_deb525, arial;
+  font-size:
+14px;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none solid rgb(237, 237, 237);
+  text-align: start;
+  text-indent: 0px;
+  line-height: 28px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+}
+/* .foldre{
+  visibility:;
+} */

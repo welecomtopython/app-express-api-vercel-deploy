@@ -1,0 +1,17 @@
+
+.reuslt{
+  width: calc(90%/4);
+}
+.pernt{
+}
+.child{
+  margin-right: auto;
+  margin-top: 8px;
+  height: 150px;
+  display: flex;
+}
+.img{
+  height:250px;
+  padding: 5px;
+  ;
+}

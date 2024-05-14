@@ -1,0 +1,44 @@
+.n-file:hover{
+  border-color: var(--color-root-r);
+  border-width: 0.5;
+  
+  
+}
+.but-ok:hover{
+  border-color: var(--color-root-r);
+  border-width: 2.8;
+  border: 1.2px solid var(--color-root-r);
+ 
+  opacity: 85%;
+
+  
+  
+}
+.but-ok{
+    border: 0.2px solid var(--color-root-r);
+    width: 90px;
+    border-radius: 5%;
+    text-size-adjust: 5px;
+    font-size: 15px;
+    margin: 5px;
+    margin-left: 10px;
+    height: auto;
+    /* transform-box: border-box; */
+     background-color: var(--color-root-r);
+  color: aliceblue;
+    
+   
+    
+
+    
+
+}
+
+.inp-file{
+  border: 0.5px solid var(--color-root-r);
+  border-radius: 3px;
+  margin-left: 10px;
+  padding: 1px;
+  transition: border-color 0.2s;
+  outline: none;
+}
