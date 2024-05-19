@@ -27,6 +27,10 @@ async function createUser(data) {
   return allUsers;
 }
 
+
+app.get("/", (req, res) => {
+  res.send({ about: "About route 🎉 " });
+});
 app.post("/post", async (req, res) => {
   const body = req.body;
   const validation = validationSchema.safeParse(body);
