@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node dist/app.js",
-    "dev": "nodemon src/app.ts"
+   
+    "start": "node server.js",
+    "dev": "nodemon server.ts"
   },
   "author": "",
   "license": "ISC",

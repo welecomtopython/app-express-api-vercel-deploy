@@ -29,6 +29,7 @@ async function createUser(data) {
 
 app.get("/", (req, res) => {
   res.send({ about: "About route 🎉" });
+  return res.status(200).send("nternal Server Renerr");
 });
 
 app.post("/post", async (req, res) => {
@@ -46,6 +47,7 @@ app.post("/post", async (req, res) => {
       address: body.address,
     });
     res.send(data);
+    res.status(200).send("Internal Server Renerr");
   } catch (error) {
     console.error("Error creating user:", error);
     res.status(500).send("Internal Server Error");
