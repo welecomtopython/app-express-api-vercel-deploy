@@ -1,0 +1,47 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./../src/dev.db" // Or provide your SQLite database file path here
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id       Int       @id @default(autoincrement())
+  slug     String    @unique
+  title    String
+  body     String
+  authorId Int
+  comments Comment[]
+  type     String    @default("null")
+}
+
+model User {
+  id      Int     @id @default(autoincrement())
+  email   String  @default("null")
+  name    String? @default("null")
+  address String? @default("null")
+}
+
+model Comment {
+  id      Int    @id @default(autoincrement())
+  comment String
+  post    Post   @relation(fields: [postId], references: [id])
+  postId  Int
+}
+
+// Address is an embedded document
+model Address {
+  id     Int    @id @default(autoincrement())
+  street String
+  city   String
+  state  String
+  zip    String
+}
+
+model Tedta {
+  id   Int    @id @default(autoincrement())
+  name String
+  type String
+}
