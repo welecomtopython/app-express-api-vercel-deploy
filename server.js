@@ -4,12 +4,13 @@ const app = express();
 const PORT = 8000;
 
 app.get("/", (req, res) => {
+  const r=req.method
   const responseData = {
-    message: "Hello, world!",
+    message: "Hello, world!  >>method ",
     timestamp: new Date(),
     status: "success",
+    method: r,
   };
-
   res.json(responseData); // إعادة الاستجابة كـ JSON
 });
 

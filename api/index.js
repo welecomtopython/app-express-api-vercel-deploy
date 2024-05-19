@@ -3,10 +3,13 @@ async function  F() {
   
   
   const data = await fetch(
-    "https://app-isuues-nextjs2-ctfuzmb2t-welecomtopythons-projects.vercel.app/"
+    "https://app-isuues-nextjs2-kmrjfe3kh-welecomtopythons-projects.vercel.app/"
   )
-   .then(async (response) =>  await response) // تحويل الاستجابة إلى JSON
-    .then((data) => console.log(data)) // التعامل مع البيانات
+    .then(async (data) => { return await data.json()}) // تحويل الاستجابة إلى JSON
+     // التعامل مع البيانات
+     console.log(data.json())
     .catch((error) => console.error("Error:", error)); // التعامل مع الأخطاء
+
+
 }
 F()
