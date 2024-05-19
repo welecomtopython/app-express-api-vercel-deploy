@@ -4,7 +4,13 @@ const app = express();
 const PORT = 8000;
 
 app.get("/", (req, res) => {
-  res.send({msge:"Hello World"});
+  const responseData = {
+    message: "Hello, world!",
+    timestamp: new Date(),
+    status: "success",
+  };
+
+  res.json(responseData); // إعادة الاستجابة كـ JSON
 });
 
 app.get("/about", (req, res) => {
