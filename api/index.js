@@ -2,12 +2,13 @@
 async function  F() {
   
   
-  const data = await fetch(
-    "https://app-isuues-nextjs2-kmrjfe3kh-welecomtopythons-projects.vercel.app/"
-  )
-    .then(async (data) => { return await data.json()}) // تحويل الاستجابة إلى JSON
+  const data = await fetch("https://app-isuues-nextjs2.vercel.app/").then(
+    async (data) => {
+      return await data.json();
+    }
+  ); // تحويل الاستجابة إلى JSON
      // التعامل مع البيانات
-     console.log(data.json())
+     console.log(data)
     .catch((error) => console.error("Error:", error)); // التعامل مع الأخطاء
 
 

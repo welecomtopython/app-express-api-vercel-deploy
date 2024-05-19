@@ -10,6 +10,8 @@ app.get("/", (req, res) => {
     timestamp: new Date(),
     status: "success",
     method: r,
+    name:"Mohmeed",
+    age:25
   };
   res.json(responseData); // إعادة الاستجابة كـ JSON
 });
