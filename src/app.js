@@ -1,17 +1,17 @@
-import express from "express";
-import { PrismaClient } from "@prisma/client";
-import z from "zod";
+const express = require("express");
+const { PrismaClient } = require("@prisma/client");
+const z = require("zod");
 
 const prisma = new PrismaClient();
 const app = express();
-export const PORT = 8000;
+const PORT = 8000;
 
 app.use(express.json());
 
 const validationSchema = z.object({
   name: z.string().min(1, "Name is required").max(200),
-  email: z.string().min(1, "Type is required"),
-  address : z.any()
+  email: z.string().min(1, "Email is required"),
+  address: z.any(),
 });
 
 async function createUser(data) {
@@ -19,7 +19,7 @@ async function createUser(data) {
     data: {
       name: data.name,
       email: data.email,
-      address: data.address
+      address: data.address,
     },
   });
 
@@ -27,10 +27,10 @@ async function createUser(data) {
   return allUsers;
 }
 
-
 app.get("/", (req, res) => {
-  res.send({ about: "About route 🎉 " });
+  res.send({ about: "About route 🎉" });
 });
+
 app.post("/post", async (req, res) => {
   const body = req.body;
   const validation = validationSchema.safeParse(body);
@@ -43,7 +43,7 @@ app.post("/post", async (req, res) => {
     const data = await createUser({
       name: body.name,
       email: body.email,
-      addreess : body.address
+      address: body.address,
     });
     res.send(data);
   } catch (error) {
